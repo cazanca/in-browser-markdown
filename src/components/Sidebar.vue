@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="flex flex-col justify-between bg-custom-900 min-w-[250px] -ml-[250px] px-6 pt-7 h-full transition-all duration-300 ease-in-out"
+    class="min-h-screen h-auto flex flex-col justify-between bg-custom-900 min-w-[250px] -ml-[250px] px-6 pt-7 h-full transition-all duration-300 ease-in-out"
     :class="{ 'ml-0': isNavigationOpen }"
   >
     <div class="min-h-[80%] overflow-auto">
@@ -9,7 +9,8 @@
       <div class="w-full mt-7">
         <p class="uppercase text-custom-500 tracking-widest">my documents</p>
         <JButton class="mt-7 w-full">+ new document</JButton>
-        <ul class="mt-6 space-y-6">
+        
+        <ul class="mt-6 space-y-6 ml-0">
           <li class="min-h-[36px] flex items-center gap-x-[11px]">
             <iconDocument class="text-custom-100" />
             <div class="max-h-[38px] group">
@@ -26,6 +27,7 @@
             </div>
           </li>
         </ul>
+
       </div>
     </div>
     <Switch v-model="isDark" />

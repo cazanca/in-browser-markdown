@@ -1,6 +1,6 @@
 <template>
   <main
-    class="max-h-screen h-screen overflow-hidden flex flex-shrink-0 transition-colors duration-300"
+    class="max-h-screen h-screen overflow-x-hidden flex flex-shrink-0 transition-colors duration-300"
   >
     <Sidebar :is-navigation-open="isNavigationOpen" />
 
