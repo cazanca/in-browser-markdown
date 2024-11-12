@@ -24,7 +24,7 @@
 
     </div>
     <div class="flex items-center gap-6 pr-4">
-      <button class="text-custom-500 w-5 h-5">
+      <button class="text-custom-500 w-5 h-5" @click.prevent="emit('confirm-delete')">
         <IconDelete />
       </button>
       <JButton>
@@ -41,8 +41,8 @@ import IconClose from './icons/IconClose.vue'
 import IconDelete from './icons/IconDelete.vue';
 import IconSave from './icons/IconSave.vue';
 import JButton from './JButton.vue';
-import IconDocument from './icons/IconDocument.vue';
-import FileRename from './FileRename.vue';
+/* import IconDocument from './icons/IconDocument.vue';
+ */import FileRename from './FileRename.vue';
 
 defineProps({
   isNavigationOpen: {
@@ -51,5 +51,5 @@ defineProps({
   },
 })
 
-const emit = defineEmits(['openNavigation', 'closeNavigation'])
+const emit = defineEmits(['openNavigation', 'closeNavigation', 'confirm-delete'])
 </script>

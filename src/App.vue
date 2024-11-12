@@ -9,11 +9,13 @@
         :is-navigation-open="isNavigationOpen"
         @open-navigation="openNavigation"
         @close-navigation="closeNavigation"
+        @confirm-delete="isModalOpen = true"
       />
      
       <MarkdownPreview />
     </section>
   </main>
+  <Modal :is-open="isModalOpen" @delete-close="isModalOpen = false"/>
 </template>
 
 <script setup>
@@ -23,11 +25,13 @@ import { useDark } from '@vueuse/core'
 import Sidebar from './components/Sidebar.vue'
 import Navbar from './components/Navbar.vue'
 import MarkdownPreview from './components/MarkdownPreview.vue';
+import Modal from './components/Modal.vue';
 
 const isDark = useDark()
 
 const isNavigationOpen = ref(false)
 
+const isModalOpen = ref(false)
 
 const openNavigation = () => {
   isNavigationOpen.value = true
