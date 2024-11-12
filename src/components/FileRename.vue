@@ -1,11 +1,11 @@
 <template>
   <div
-    class="bg-custom-800 min-h-[72px] flex items-center gap-x-[11px] max-w-[350px] pl-6"
+    class="bg-custom-800 h-14 md:h-[64px] flex items-center gap-x-[11px] max-w-[350px] pl-6"
   >
     <iconDocument class="text-custom-100" />
-    <div class="max-h-[38px] w-[80%] group">
+    <div class="w-[80%] group">
       <p
-        class="text-custom-400 font-thin text-[13px] group-hover:text-custom-500"
+        class="hidden md:inline-block text-custom-400 font-thin text-[13px] group-hover:text-custom-500"
       >
         Document name
       </p>

@@ -1,6 +1,7 @@
 <template>
-  <nav class="h-14 md:h-[64px] bg-custom-800 flex items-center">
-    <div>
+  <nav class="h-14 md:h-[64px] bg-custom-800 flex items-center justify-between">
+    
+    <div class="flex items-center">
       <button
         @click.prevent="emit('openNavigation')"
         v-if="!isNavigationOpen"
@@ -15,14 +16,33 @@
       >
         <IconClose />
       </button>
+      <div class="flex items-center">
+        <p class="hidden mx-6 lg:inline-block uppercase text-custom-100 tracking-[5px] font-logo">markdown</p>
+      <hr class="hidden lg:inline-flex border border-custom-600 min-h-8"/>
+      <FileRename />
+      </div>
+
     </div>
-    <div>2</div>
+    <div class="flex items-center gap-6 pr-4">
+      <button class="text-custom-500 w-5 h-5">
+        <IconDelete />
+      </button>
+      <JButton>
+        <IconSave/>
+        <span class="hidden md:inline-block">Save Changes</span>
+      </JButton>
+    </div>
   </nav>
 </template>
 
 <script setup>
 import IconMenu from './icons/IconMenu.vue'
 import IconClose from './icons/IconClose.vue'
+import IconDelete from './icons/IconDelete.vue';
+import IconSave from './icons/IconSave.vue';
+import JButton from './JButton.vue';
+import IconDocument from './icons/IconDocument.vue';
+import FileRename from './FileRename.vue';
 
 defineProps({
   isNavigationOpen: {

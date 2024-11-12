@@ -1,12 +1,12 @@
 <template>
   <aside
-    class="min-h-screen h-auto flex flex-col justify-between bg-custom-900 min-w-[250px] -ml-[250px] px-6 pt-7 h-full transition-all duration-300 ease-in-out"
+    class="min-h-screen flex flex-col justify-between bg-custom-900 min-w-[250px] -ml-[250px] px-6 pt-7 h-full transition-all duration-300 ease-in-out"
     :class="{ 'ml-0': isNavigationOpen }"
   >
     <div class="min-h-[80%] overflow-auto">
-      <p class="uppercase text-custom-100 tracking-[5px] font-logo">markdown</p>
+      <p class="uppercase text-custom-100 tracking-[5px] font-logo lg:hidden">markdown</p>
 
-      <div class="w-full mt-7">
+      <div class="w-full mt-7 lg:mt-0">
         <p class="uppercase text-custom-500 tracking-widest">my documents</p>
         <JButton class="mt-7 w-full">+ new document</JButton>
         
